@@ -153,7 +153,7 @@ class UsersController {
             const isVerify = await CommonFunctions.decryptedPassword(password, user.password);
 
             if (isVerify) {
-                user.token = jwt.sign({ id: user._id, name: user.username }, process.env.JWT_SECRET_KEY, { expiresIn: "30d" });
+                user.token = jwt.sign({ id: user._id, name: user.username }, process.env.JWT_SECRET_KEY || "secretkey", { expiresIn: "30d" });
 
                 return res.status(200).json({
                     success: true,

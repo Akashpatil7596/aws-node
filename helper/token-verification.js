@@ -6,7 +6,7 @@ const tokenVerification = async (req, res, next) => {
     try {
         const token = req.headers.authorization.replace("Bearer", "").trim();
 
-        const getTokenPayload = jwt.verify(token, process.env.JWT_SECRET_KEY, (err, decoded) => {
+        const getTokenPayload = jwt.verify(token, process.env.JWT_SECRET_KEY || "secretkey", (err, decoded) => {
             if (!err) {
                 return decoded;
             }

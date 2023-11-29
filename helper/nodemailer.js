@@ -4,12 +4,12 @@ import smtpTransport from "nodemailer-smtp-transport";
 const emailConfig = {
     service: "gmail",
     auth: {
-        user: process.env.SENDER_MAIL_NODEMAILER,
-        pass: process.env.SENDER_PASSWORD_NODEMAILER,
+        user: process.env.SENDER_MAIL_NODEMAILER || "dummyforaltair@gmail.com",
+        pass: process.env.SENDER_PASSWORD_NODEMAILER || "ybwd pkkz thfb qpqc",
     },
 };
 
-const SOURCE_EMAIL = process.env.SMTP_SOURCE_EMAIL;
+const SOURCE_EMAIL = process.env.SMTP_SOURCE_EMAIL || "dummyforaltair@gmail.com";
 
 const transporter = nodemailer.createTransport(smtpTransport(emailConfig));
 
