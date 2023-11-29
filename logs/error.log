@@ -1,0 +1,60 @@
+2023-10-17 16:56:29 [error] : 🚀 ~ file: users.validation.js:28 ~ createUserValidation: ~ error: commonResponse is not defined
+2023-10-17 16:56:39 [error] : 🚀 ~ file: users.validation.js:28 ~ createUserValidation: ~ error: commonResponse is not defined
+2023-10-17 16:57:39 [error] : 🚀 ~ file: users.validation.js:28 ~ createUserValidation: ~ error: commonResponse is not defined
+2023-10-17 16:57:56 [error] : 🚀 ~ file: users.validation.js:28 ~ createUserValidation: ~ error: commonResponse is not defined
+2023-10-17 17:00:35 [error] : 🚀 ~ file: users.validation.js:28 ~ createUserValidation: ~ error: commonResponse is not defined
+2023-10-17 17:01:36 [error] : 🚀 ~ file: users.validation.js:28 ~ createUserValidation: ~ error: commonResponse is not defined
+2023-10-17 17:01:55 [error] : 🚀 ~ file: users.validation.js:28 ~ createUserValidation: ~ error: commonResponse is not defined
+2023-10-17 17:02:15 [error] : 🚀 ~ file: users.validation.js:28 ~ createUserValidation: ~ error: commonResponse is not defined
+2023-10-17 17:09:09 [error] : 🚀 ~ file: users.validation.js:28 ~ createUserValidation: ~ error: _ is not defined
+2023-10-17 17:11:17 [error] : 🚀 ~ file: users.validation.js:28 ~ createUserValidation: ~ error: _ is not defined
+2023-10-17 17:11:56 [error] : 🚀 ~ file: users.validation.js:28 ~ createUserValidation: ~ error: _ is not defined
+2023-10-18 09:41:02 [error] : 🚀 ~ file: users.validation.js:28 ~ createUserValidation: ~ error: _ is not defined
+2023-10-18 09:42:09 [error] : 🚀 ~ file: users.validation.js:28 ~ createUserValidation: ~ error: _ is not defined
+2023-10-18 09:42:48 [error] : 🚀 ~ file: users.validation.js:28 ~ createUserValidation: ~ error: _ is not defined
+2023-10-18 09:44:13 [error] : 🚀 ~ file: users.validation.js:28 ~ createUserValidation: ~ error: _ is not defined
+2023-10-18 12:10:19 [error] : 🚀 ~ file: admin.controller.js:113 ~ err: /home/user/Akash/personal/nodeJs/express-structure-udemy/views/send-otp.ejs:73
+    71|                                                 <p
+    72|                                                     style="margin:0;padding:0;padding-bottom:20px;line-height:1.6;font-family:'Rubik';color:#2d4f43;font-family:'Rubik', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important; font-weight: 600;text-align: left;">
+ >> 73|                                                     Hello, <%= first_name %>!
+    74|                                                 </p>
+    75|                                                 <p
+    76|                                                     style="margin:0;padding:0;padding-bottom:20px;line-height:1.6;font-family:'Rubik';color:#2d4f43;font-family:'Rubik', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;text-align: left;">
+
+first_name is not defined
+2023-10-18 12:14:22 [error] : 🚀 ~ file: users.controller.js:52 ~ err: /home/user/Akash/personal/nodeJs/express-structure-udemy/views/send-otp.ejs:73
+    71|                                                 <p
+    72|                                                     style="margin:0;padding:0;padding-bottom:20px;line-height:1.6;font-family:'Rubik';color:#2d4f43;font-family:'Rubik', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important; font-weight: 600;text-align: left;">
+ >> 73|                                                     Hello, <%= first_name %>!
+    74|                                                 </p>
+    75|                                                 <p
+    76|                                                     style="margin:0;padding:0;padding-bottom:20px;line-height:1.6;font-family:'Rubik';color:#2d4f43;font-family:'Rubik', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;text-align: left;">
+
+first_name is not defined
+2023-10-18 12:16:24 [error] : 🚀 ~ file: users.controller.js:52 ~ err: /home/user/Akash/personal/nodeJs/express-structure-udemy/views/send-otp.ejs:73
+    71|                                                 <p
+    72|                                                     style="margin:0;padding:0;padding-bottom:20px;line-height:1.6;font-family:'Rubik';color:#2d4f43;font-family:'Rubik', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important; font-weight: 600;text-align: left;">
+ >> 73|                                                     Hello, <%= first_name %>!
+    74|                                                 </p>
+    75|                                                 <p
+    76|                                                     style="margin:0;padding:0;padding-bottom:20px;line-height:1.6;font-family:'Rubik';color:#2d4f43;font-family:'Rubik', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;text-align: left;">
+
+first_name is not defined
+2023-10-18 12:21:10 [error] : 🚀 ~ file: users.controller.js:52 ~ err: /home/user/Akash/personal/nodeJs/express-structure-udemy/views/send-otp.ejs:73
+    71|                                                 <p
+    72|                                                     style="margin:0;padding:0;padding-bottom:20px;line-height:1.6;font-family:'Rubik';color:#2d4f43;font-family:'Rubik', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important; font-weight: 600;text-align: left;">
+ >> 73|                                                     Hello, <%= first_name %>!
+    74|                                                 </p>
+    75|                                                 <p
+    76|                                                     style="margin:0;padding:0;padding-bottom:20px;line-height:1.6;font-family:'Rubik';color:#2d4f43;font-family:'Rubik', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;text-align: left;">
+
+first_name is not defined
+2023-10-18 12:22:28 [error] : 🚀 ~ file: users.controller.js:52 ~ err: /home/user/Akash/personal/nodeJs/express-structure-udemy/views/send-otp.ejs:73
+    71|                                                 <p
+    72|                                                     style="margin:0;padding:0;padding-bottom:20px;line-height:1.6;font-family:'Rubik';color:#2d4f43;font-family:'Rubik', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important; font-weight: 600;text-align: left;">
+ >> 73|                                                     Hello, <%= first_name %>!
+    74|                                                 </p>
+    75|                                                 <p
+    76|                                                     style="margin:0;padding:0;padding-bottom:20px;line-height:1.6;font-family:'Rubik';color:#2d4f43;font-family:'Rubik', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;text-align: left;">
+
+first_name is not defined
