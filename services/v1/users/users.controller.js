@@ -5,6 +5,7 @@ import { generate } from "otp-generator";
 import ejs from "ejs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { logger } from "../../../helper/logger.js";
 import UserServices from "./users.services.js";
 import Detail from "../../../config/class.js";
 import { uploadFile } from "../../../helper/file-upload.js";
@@ -84,7 +85,7 @@ class UsersController {
                 message: "Register successfully",
             });
         } catch (error) {
-            console.log("user.controller.js | line 85 | error", error);
+            logger.info("🚀 user.controller.js | line 88 | error", error);
             return res.status(500).json({
                 success: false,
                 error: error,
@@ -126,7 +127,7 @@ class UsersController {
                 message: "User verified successfully",
             });
         } catch (error) {
-            console.log("user.controller.js | line 127 | error", error);
+            logger.info("🚀 user.controller.js | line 130 | error", error);
             return res.status(500).json({
                 success: false,
                 error: error,
@@ -171,7 +172,7 @@ class UsersController {
                 });
             }
         } catch (error) {
-            console.log("user.controller.js | line 172 | error", error);
+            logger.info("🚀 user.controller.js | line 175 | error", error);
             return res.status(500).json({
                 success: false,
                 error: error,
@@ -187,7 +188,7 @@ class UsersController {
                 message: "User LoggedIn successfully",
             });
         } catch (error) {
-            console.log("user.controller.js | line 188 | error", error);
+            logger.info("🚀 user.controller.js | line 191 | error", error);
 
             return res.status(500).json({
                 success: false,

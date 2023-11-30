@@ -1,0 +1,9 @@
+[2023-11-30T10:38:15.480] [INFO] app - 🚀 ~ file: user.controller.js:20 ~ checkExist: ~ info: req.body [Object: null prototype] {
+  email: 'ap3135198@gmail.com',
+  password: '12345',
+  username: 'test',
+  confirm_password: '12345'
+}
+[2023-11-30T10:39:49.222] [INFO] app - 🚀 user.controller.js | line 88 | error ReferenceError: templatePath is not defined
+    at createUser (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:63:32)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)

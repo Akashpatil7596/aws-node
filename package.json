@@ -33,6 +33,7 @@
         "joi": "^17.11.0",
         "joi-objectid": "^4.0.2",
         "jsonwebtoken": "^9.0.2",
+        "log4js": "^6.9.1",
         "moment": "^2.29.4",
         "mongoose": "^7.4.3",
         "nodemailer": "^6.9.7",
