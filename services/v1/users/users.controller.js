@@ -57,6 +57,8 @@ class UsersController {
                 const __filename = new URL(import.meta.url).pathname;
                 const __dirname = path.dirname(__filename);
 
+                const templatePath = path.join(__dirname, "../../../", "views", "verification.ejs");
+
                 ejs.renderFile(templatePath, htmlData, function (err, data) {
                     if (err) {
                         console.log("🚀 ~ file: user.controller.js:165 ~ err:", err);
