@@ -13,6 +13,12 @@ router.post("/verify-user", usersValidation.verifyValidation, usersController.ve
 
 router.post("/login", usersValidation.loginValidation, usersController.login);
 
+router.post("/profile", tokenVerification, usersController.getUserByUId);
+
+router.post("/forgot-password", usersValidation.forgotPasswordValidation, usersController.forgotPassword);
+
+router.post("/verify-forgot-password", usersValidation.resendOtpValidation, usersController.verifyForgotPassword);
+
 router.post("/logout", tokenVerification, usersController.logout);
 
 export default router;

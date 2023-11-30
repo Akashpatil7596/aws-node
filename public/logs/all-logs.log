@@ -1,9 +1,10 @@
-[2023-11-30T10:38:15.480] [INFO] app - 🚀 ~ file: user.controller.js:20 ~ checkExist: ~ info: req.body [Object: null prototype] {
-  email: 'ap3135198@gmail.com',
-  password: '12345',
-  username: 'test',
-  confirm_password: '12345'
+[2023-11-30T15:25:00.906] [INFO] app - 🚀 user.controller.js | line 191 | error TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+    at validateString (node:internal/validators:162:11)
+    at Object.join (node:path:1175:7)
+    at getUserByUId (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:211:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  code: 'ERR_INVALID_ARG_TYPE'
 }
-[2023-11-30T10:39:49.222] [INFO] app - 🚀 user.controller.js | line 88 | error ReferenceError: templatePath is not defined
-    at createUser (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:63:32)
+[2023-11-30T18:25:11.891] [INFO] app - 🚀 user.controller.js | line 369 | error ReferenceError: updateUserWithOtp is not defined
+    at verifyForgotPassword (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:365:23)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)

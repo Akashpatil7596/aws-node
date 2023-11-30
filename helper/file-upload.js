@@ -4,7 +4,6 @@ import { extname } from "path";
 import { STORAGE_PATH } from "./constants.js";
 
 export const uploadFile = (dir, file) => {
-    console.log("FILE", file);
     const storageDirExists = existsSync(STORAGE_PATH);
     if (!storageDirExists) {
         mkdirSync(STORAGE_PATH);

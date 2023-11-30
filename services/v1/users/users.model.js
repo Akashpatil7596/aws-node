@@ -25,6 +25,12 @@ const UserSchema = new Schema({
     otp_expiration_time: {
         type: Date,
     },
+    forgot_password_otp: {
+        type: String,
+    },
+    forgot_password_otp_expiration_time: {
+        type: Date,
+    },
     verification_status: {
         type: String,
         enum: Object.values(VERIFICATION_STATUS),
