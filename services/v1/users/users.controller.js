@@ -82,6 +82,7 @@ class UsersController {
                 message: "Register successfully",
             });
         } catch (error) {
+            console.log("user.controller.js | line 85 | error", error);
             return res.status(500).json({
                 success: false,
                 error: error,
@@ -123,6 +124,7 @@ class UsersController {
                 message: "User verified successfully",
             });
         } catch (error) {
+            console.log("user.controller.js | line 127 | error", error);
             return res.status(500).json({
                 success: false,
                 error: error,
@@ -167,7 +169,7 @@ class UsersController {
                 });
             }
         } catch (error) {
-            console.log("error", error);
+            console.log("user.controller.js | line 172 | error", error);
             return res.status(500).json({
                 success: false,
                 error: error,
@@ -183,6 +185,8 @@ class UsersController {
                 message: "User LoggedIn successfully",
             });
         } catch (error) {
+            console.log("user.controller.js | line 188 | error", error);
+
             return res.status(500).json({
                 success: false,
                 error: error,
