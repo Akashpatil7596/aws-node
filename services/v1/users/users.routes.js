@@ -19,6 +19,8 @@ router.post("/forgot-password", usersValidation.forgotPasswordValidation, usersC
 
 router.post("/verify-forgot-password", usersValidation.resendOtpValidation, usersController.verifyForgotPassword);
 
+router.post("/reset-password", usersValidation.resetPasswordValidation, usersController.resetPassword);
+
 router.post("/logout", tokenVerification, usersController.logout);
 
 export default router;

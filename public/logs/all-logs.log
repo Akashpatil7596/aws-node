@@ -1,10 +1,318 @@
-[2023-11-30T15:25:00.906] [INFO] app - 🚀 user.controller.js | line 191 | error TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
-    at validateString (node:internal/validators:162:11)
-    at Object.join (node:path:1175:7)
-    at getUserByUId (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:211:36)
+[2023-12-01T10:42:13.228] [INFO] app - 🚀 user.controller.js | line 251 | error Error: ENOENT: no such file or directory, open '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/d23a73e6-e8a0-47c2-ad3a-9205e28ba82d.jpg'
+    at Object.openSync (node:fs:581:18)
+    at readFileSync (node:fs:457:35)
+    at getUserByUId (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:231:36)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
-  code: 'ERR_INVALID_ARG_TYPE'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/d23a73e6-e8a0-47c2-ad3a-9205e28ba82d.jpg'
 }
-[2023-11-30T18:25:11.891] [INFO] app - 🚀 user.controller.js | line 369 | error ReferenceError: updateUserWithOtp is not defined
-    at verifyForgotPassword (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:365:23)
+[2023-12-01T10:42:29.365] [INFO] app - 🚀 user.controller.js | line 251 | error Error: ENOENT: no such file or directory, open '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/d23a73e6-e8a0-47c2-ad3a-9205e28ba82d.jpg'
+    at Object.openSync (node:fs:581:18)
+    at readFileSync (node:fs:457:35)
+    at getUserByUId (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:231:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/d23a73e6-e8a0-47c2-ad3a-9205e28ba82d.jpg'
+}
+[2023-12-01T10:43:56.157] [INFO] app - 🚀 user.controller.js | line 251 | error Error: ENOENT: no such file or directory, open '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/69f27c9b-9435-4c7d-8003-d2dffaef7355.jpg'
+    at Object.openSync (node:fs:581:18)
+    at readFileSync (node:fs:457:35)
+    at getUserByUId (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:231:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/69f27c9b-9435-4c7d-8003-d2dffaef7355.jpg'
+}
+[2023-12-01T10:45:41.282] [INFO] app - 🚀 user.controller.js | line 369 | error TypeError: Cannot read properties of undefined (reading 'toISOString')
+    at verifyForgotPassword (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:345:126)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-12-01T15:02:58.889] [INFO] app - 🚀 user.controller.js | line 251 | error Error: ENOENT: no such file or directory, open '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+    at Object.openSync (node:fs:581:18)
+    at readFileSync (node:fs:457:35)
+    at getUserByUId (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:234:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+}
+[2023-12-01T17:11:22.997] [INFO] app - 🚀 user.controller.js | line 251 | error Error: ENOENT: no such file or directory, open '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+    at Object.openSync (node:fs:581:18)
+    at readFileSync (node:fs:457:35)
+    at getUserByUId (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:234:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+}
+[2023-12-01T17:12:29.677] [INFO] app - 🚀 user.controller.js | line 251 | error Error: ENOENT: no such file or directory, open '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+    at Object.openSync (node:fs:581:18)
+    at readFileSync (node:fs:457:35)
+    at getUserByUId (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:234:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+}
+[2023-12-01T17:12:31.932] [INFO] app - 🚀 user.controller.js | line 251 | error Error: ENOENT: no such file or directory, open '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+    at Object.openSync (node:fs:581:18)
+    at readFileSync (node:fs:457:35)
+    at getUserByUId (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:234:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+}
+[2023-12-01T17:12:33.032] [INFO] app - 🚀 user.controller.js | line 251 | error Error: ENOENT: no such file or directory, open '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+    at Object.openSync (node:fs:581:18)
+    at readFileSync (node:fs:457:35)
+    at getUserByUId (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:234:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+}
+[2023-12-01T17:12:34.469] [INFO] app - 🚀 user.controller.js | line 251 | error Error: ENOENT: no such file or directory, open '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+    at Object.openSync (node:fs:581:18)
+    at readFileSync (node:fs:457:35)
+    at getUserByUId (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:234:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+}
+[2023-12-01T17:12:35.585] [INFO] app - 🚀 user.controller.js | line 251 | error Error: ENOENT: no such file or directory, open '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+    at Object.openSync (node:fs:581:18)
+    at readFileSync (node:fs:457:35)
+    at getUserByUId (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:234:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+}
+[2023-12-01T17:12:36.731] [INFO] app - 🚀 user.controller.js | line 251 | error Error: ENOENT: no such file or directory, open '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+    at Object.openSync (node:fs:581:18)
+    at readFileSync (node:fs:457:35)
+    at getUserByUId (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:234:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+}
+[2023-12-01T17:13:16.205] [INFO] app - 🚀 user.controller.js | line 251 | error Error: ENOENT: no such file or directory, open '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+    at Object.openSync (node:fs:581:18)
+    at readFileSync (node:fs:457:35)
+    at getUserByUId (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:234:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+}
+[2023-12-01T17:13:31.539] [INFO] app - 🚀 user.controller.js | line 251 | error Error: ENOENT: no such file or directory, open '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+    at Object.openSync (node:fs:581:18)
+    at readFileSync (node:fs:457:35)
+    at getUserByUId (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:234:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+}
+[2023-12-01T17:14:13.978] [INFO] app - 🚀 user.controller.js | line 251 | error Error: ENOENT: no such file or directory, open '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+    at Object.openSync (node:fs:581:18)
+    at readFileSync (node:fs:457:35)
+    at getUserByUId (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:234:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+}
+[2023-12-01T17:14:19.905] [INFO] app - 🚀 user.controller.js | line 251 | error Error: ENOENT: no such file or directory, open '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+    at Object.openSync (node:fs:581:18)
+    at readFileSync (node:fs:457:35)
+    at getUserByUId (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:234:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+}
+[2023-12-01T17:14:21.213] [INFO] app - 🚀 user.controller.js | line 251 | error Error: ENOENT: no such file or directory, open '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+    at Object.openSync (node:fs:581:18)
+    at readFileSync (node:fs:457:35)
+    at getUserByUId (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:234:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+}
+[2023-12-01T17:14:23.262] [INFO] app - 🚀 user.controller.js | line 251 | error Error: ENOENT: no such file or directory, open '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+    at Object.openSync (node:fs:581:18)
+    at readFileSync (node:fs:457:35)
+    at getUserByUId (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:234:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+}
+[2023-12-01T17:14:24.422] [INFO] app - 🚀 user.controller.js | line 251 | error Error: ENOENT: no such file or directory, open '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+    at Object.openSync (node:fs:581:18)
+    at readFileSync (node:fs:457:35)
+    at getUserByUId (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:234:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+}
+[2023-12-01T17:23:15.955] [INFO] app - 🚀 user.controller.js | line 251 | error Error: ENOENT: no such file or directory, open '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+    at Object.openSync (node:fs:581:18)
+    at readFileSync (node:fs:457:35)
+    at getUserByUId (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:234:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+}
+[2023-12-01T17:23:18.100] [INFO] app - 🚀 user.controller.js | line 251 | error Error: ENOENT: no such file or directory, open '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+    at Object.openSync (node:fs:581:18)
+    at readFileSync (node:fs:457:35)
+    at getUserByUId (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:234:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+}
+[2023-12-01T17:23:19.202] [INFO] app - 🚀 user.controller.js | line 251 | error Error: ENOENT: no such file or directory, open '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+    at Object.openSync (node:fs:581:18)
+    at readFileSync (node:fs:457:35)
+    at getUserByUId (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:234:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+}
+[2023-12-01T17:24:18.849] [INFO] app - 🚀 user.controller.js | line 251 | error Error: ENOENT: no such file or directory, open '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+    at Object.openSync (node:fs:581:18)
+    at readFileSync (node:fs:457:35)
+    at getUserByUId (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:234:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+}
+[2023-12-01T17:24:41.152] [INFO] app - 🚀 user.controller.js | line 251 | error Error: ENOENT: no such file or directory, open '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+    at Object.openSync (node:fs:581:18)
+    at readFileSync (node:fs:457:35)
+    at getUserByUId (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:234:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+}
+[2023-12-01T17:25:32.159] [INFO] app - 🚀 user.controller.js | line 251 | error Error: ENOENT: no such file or directory, open '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+    at Object.openSync (node:fs:581:18)
+    at readFileSync (node:fs:457:35)
+    at getUserByUId (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:234:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+}
+[2023-12-01T17:25:33.483] [INFO] app - 🚀 user.controller.js | line 251 | error Error: ENOENT: no such file or directory, open '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+    at Object.openSync (node:fs:581:18)
+    at readFileSync (node:fs:457:35)
+    at getUserByUId (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:234:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+}
+[2023-12-01T17:25:35.064] [INFO] app - 🚀 user.controller.js | line 251 | error Error: ENOENT: no such file or directory, open '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+    at Object.openSync (node:fs:581:18)
+    at readFileSync (node:fs:457:35)
+    at getUserByUId (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:234:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+}
+[2023-12-01T17:32:58.319] [INFO] app - 🚀 user.controller.js | line 251 | error Error: ENOENT: no such file or directory, open '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+    at Object.openSync (node:fs:581:18)
+    at readFileSync (node:fs:457:35)
+    at getUserByUId (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:234:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+}
+[2023-12-01T17:32:59.688] [INFO] app - 🚀 user.controller.js | line 251 | error Error: ENOENT: no such file or directory, open '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+    at Object.openSync (node:fs:581:18)
+    at readFileSync (node:fs:457:35)
+    at getUserByUId (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:234:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/user/Akash/personal/nodeJs/aws-node/public/storage/users/934ed5fb-d699-4a58-92ef-ce6b450ae1d7.jpeg'
+}
+[2023-12-01T18:20:23.322] [INFO] app - 🚀 user.controller.js | line 88 | error ReferenceError: isExist is not defined
+    at createUser (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:27:13)
+    at Layer.handle [as handle_request] (/home/user/Akash/personal/nodeJs/aws-node/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/user/Akash/personal/nodeJs/aws-node/node_modules/express/lib/router/route.js:144:13)
+    at registerValidation (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.validation.js:24:17)
+    at Layer.handle [as handle_request] (/home/user/Akash/personal/nodeJs/aws-node/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/user/Akash/personal/nodeJs/aws-node/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/home/user/Akash/personal/nodeJs/aws-node/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/home/user/Akash/personal/nodeJs/aws-node/node_modules/express/lib/router/layer.js:95:5)
+    at /home/user/Akash/personal/nodeJs/aws-node/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/user/Akash/personal/nodeJs/aws-node/node_modules/express/lib/router/index.js:346:12)
+[2023-12-01T18:24:44.304] [INFO] app - 🚀 user.controller.js | line 130 | error TypeError: Cannot read properties of null (reading 'toISOString')
+    at verifyUser (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:115:110)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-12-01T18:25:05.317] [INFO] app - 🚀 user.controller.js | line 130 | error TypeError: Cannot read properties of null (reading 'toISOString')
+    at verifyUser (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:115:110)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-12-01T18:25:36.519] [INFO] app - 🚀 user.controller.js | line 130 | error TypeError: Cannot read properties of null (reading 'toISOString')
+    at verifyUser (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:115:110)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-12-01T18:25:42.013] [INFO] app - 🚀 user.controller.js | line 130 | error TypeError: Cannot read properties of null (reading 'toISOString')
+    at verifyUser (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:115:110)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-12-01T18:26:11.240] [INFO] app - 🚀 user.controller.js | line 130 | error TypeError: Cannot read properties of null (reading 'toISOString')
+    at verifyUser (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:115:110)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-12-01T18:26:13.274] [INFO] app - 🚀 user.controller.js | line 130 | error TypeError: Cannot read properties of null (reading 'toISOString')
+    at verifyUser (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:115:110)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-12-01T18:26:13.625] [INFO] app - 🚀 user.controller.js | line 130 | error TypeError: Cannot read properties of null (reading 'toISOString')
+    at verifyUser (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:115:110)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-12-01T18:26:13.815] [INFO] app - 🚀 user.controller.js | line 130 | error TypeError: Cannot read properties of null (reading 'toISOString')
+    at verifyUser (file:///home/user/Akash/personal/nodeJs/aws-node/services/v1/users/users.controller.js:115:110)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)

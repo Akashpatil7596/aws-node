@@ -8,6 +8,10 @@ class CommonFunctions {
     static async decryptedPassword(myPlaintextPassword, hash) {
         return await bcrypt.compare(myPlaintextPassword, hash);
     }
+
+    static async encryptPassword(password, salt) {
+        return await bcrypt.hash(password, salt);
+    }
 }
 
 export default CommonFunctions;

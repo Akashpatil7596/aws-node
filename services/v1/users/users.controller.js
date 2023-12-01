@@ -13,6 +13,9 @@ import sendMail from "../../../helper/aws-email.js";
 import sendNodeMail from "../../../helper/nodemailer.js";
 import CommonFunctions from "../../../helper/commonFunctions.js";
 import { VERIFICATION_STATUS } from "../../../helper/constants.js";
+import CommonResponses from "../../../helper/commonResponses.js";
+
+const commonResponse = new CommonResponses();
 
 class UsersController {
     async createUser(req, res) {
@@ -22,10 +25,7 @@ class UsersController {
             const isExist = await UserServices.getOne({ email: req.body.email });
 
             if (isExist) {
-                return res.status(404).json({
-                    success: false,
-                    message: "Email already registered try with different one",
-                });
+                return commonResponse.Error(res, 404, {}, "EMAIL_ALREADY_EXISTS");
             }
 
             if (req?.files?.image) {
@@ -41,7 +41,7 @@ class UsersController {
 
             req.body.otp_expiration_time = moment().add(5, "minutes");
 
-            req.body.password = await bcrypt.hash(req.body.password, 8);
+            req.body.password = await CommonFunctions.encryptPassword(req.body.password, 8);
 
             req.body.verification_status = VERIFICATION_STATUS.PENDING;
 
@@ -99,17 +99,10 @@ class UsersController {
                 sendNodeMail(emailData);
             }
 
-            return res.status(200).json({
-                success: true,
-                data: storeUser,
-                message: "Register successfully",
-            });
+            return commonResponse.Success(res, 200, storeUser, "USER_REGISTERED");
         } catch (error) {
-            logger.info("🚀 user.controller.js | line 88 | error", error);
-            return res.status(500).json({
-                success: false,
-                error: error,
-            });
+            logger.info("🚀 user.controller.js | line 105 | error", error);
+            return commonResponse.InternalError(res, 500, {}, "DEFAULT_INTERNAL_ERROR");
         }
     }
 
@@ -122,36 +115,26 @@ class UsersController {
             const isOtpExpired = new Date(moment().toISOString()) > new Date(moment(user.otp_expiration_time.toISOString()));
 
             if (isOtpExpired) {
-                return res.status(400).json({
-                    success: false,
-                    message: "Otp provided by you is  expired, try registering process again.",
-                });
+                return commonResponse.Error(res, 400, {}, "OTP_EXPIRED");
             }
 
             const verifyOtp = await CommonFunctions.matchString(otp, user.otp);
 
             if (!verifyOtp) {
-                return res.status(404).json({
-                    success: false,
-                    message: "Otp provided by you is not valid.",
-                });
+                return commonResponse.Error(res, 400, {}, "OTP_NOT_VALID");
             }
 
-            const updateUser = await UserServices.updateOne({ _id: userId }, { verification_status: VERIFICATION_STATUS.VERIFIED });
+            const updateUser = await UserServices.updateOne(
+                { _id: userId },
+                { verification_status: VERIFICATION_STATUS.VERIFIED, otp: "", otp_expiration_time: null }
+            );
 
             const apiResonse = new Detail(updateUser);
 
-            return res.status(200).json({
-                success: true,
-                data: apiResonse,
-                message: "User verified successfully",
-            });
+            return commonResponse.Success(res, 200, apiResonse, "USER_VERIFIED");
         } catch (error) {
             logger.info("🚀 user.controller.js | line 130 | error", error);
-            return res.status(500).json({
-                success: false,
-                error: error,
-            });
+            return commonResponse.InternalError(res, 500, {}, "DEFAULT_INTERNAL_ERROR");
         }
     }
 
@@ -360,11 +343,53 @@ class UsersController {
                 });
             }
 
+            await UserServices.updateOne({ _id: user._id }, { forgot_password_otp: "", forgot_password_otp_expiration_time: null });
+
             return res.status(200).json({
                 success: true,
                 data: user,
                 message: "Otp Verified Successfully",
             });
+        } catch (error) {
+            logger.info("🚀 user.controller.js | line 369 | error", error);
+            return res.status(500).json({
+                success: false,
+                error: error,
+            });
+        }
+    }
+
+    async resetPassword(req, res) {
+        try {
+            const { email, password } = req.body;
+
+            const user = await UserServices.getOne({ email: email }, { email: 1 });
+
+            if (!user) {
+                return res.status(404).json({
+                    success: false,
+                    data: {},
+                    message: "User Not Exists",
+                });
+            }
+
+            const hashPassword = await CommonFunctions.encryptPassword(password, 8);
+
+            const updateUserPassword = await UserServices.updateOne({ _id: user._id }, { password: hashPassword });
+
+            if (updateUserPassword) {
+                return res.status(200).json({
+                    success: true,
+                    data: user,
+                    message: "Otp Verified Successfully",
+                });
+            } else {
+                return res.status(404).json({
+                    success: false,
+                    data: {},
+                    message: "Server Error",
+                });
+            }
         } catch (error) {
             logger.info("🚀 user.controller.js | line 369 | error", error);
             return res.status(500).json({
