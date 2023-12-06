@@ -23,4 +23,6 @@ router.post("/reset-password", usersValidation.resetPasswordValidation, usersCon
 
 router.post("/logout", tokenVerification, usersController.logout);
 
+router.patch("/:id", usersValidation.updateValidation, usersController.updateUserById);
+
 export default router;

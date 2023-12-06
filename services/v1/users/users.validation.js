@@ -137,6 +137,29 @@ class UsersValidation {
             return error;
         }
     }
+
+    async updateValidation(req, res, next) {
+        try {
+            const Schema = Joi.object().keys({
+                username: Joi.string().required(),
+                email: Joi.string().lowercase().required().email(),
+                image: Joi.any(),
+            });
+
+            const result = Schema.validate(req.body);
+
+            if (result.hasOwnProperty("error")) {
+                return res.json({
+                    success: false,
+                    error: result.error.details[0].message,
+                });
+            } else {
+                next();
+            }
+        } catch (error) {
+            return error;
+        }
+    }
 }
 
 export default UsersValidation;

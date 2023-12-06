@@ -21,3 +21,14 @@ export const uploadFile = (dir, file) => {
 
     return fileName;
 };
+
+export const removeFile = (file) => {
+    const storageDirExists = existsSync(STORAGE_PATH);
+    if (!storageDirExists) {
+        mkdirSync(STORAGE_PATH);
+    }
+
+    if (file) {
+        unlinkSync(`${STORAGE_PATH}/${file}`);
+    }
+};

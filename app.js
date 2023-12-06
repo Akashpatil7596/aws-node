@@ -22,13 +22,13 @@ global.logger = logger;
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // parse application/json
-app.use(bodyParser.json());
+app.use(bodyParser.json({ limit: "5mb" }));
 
 // set the view engine to ejs
 app.set("view engine", "ejs");
 
 // parse formData
-app.use(fileUpload({ parseNested: true }));
+app.use(fileUpload({ parseNested: true, limits: "5mb" }));
 
 await mongo_connection(process.env.MONGO_URI || "mongodb+srv://root:root@cluster0.u6ctlke.mongodb.net/aws-project?retryWrites=true&w=majority");
 

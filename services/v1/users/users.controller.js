@@ -8,7 +8,7 @@ import { readFileSync } from "fs";
 import { logger } from "../../../helper/logger.js";
 import UserServices from "./users.services.js";
 import Detail from "../../../config/class.js";
-import { uploadFile } from "../../../helper/file-upload.js";
+import { uploadFile, removeFile } from "../../../helper/file-upload.js";
 import sendMail from "../../../helper/aws-email.js";
 import sendNodeMail from "../../../helper/nodemailer.js";
 import CommonFunctions from "../../../helper/commonFunctions.js";
@@ -78,11 +78,11 @@ class UsersController {
                 const __filename = new URL(import.meta.url).pathname;
                 const __dirname = path.dirname(__filename);
 
-                const templatePath = path.join(__dirname, "../../../", "views", "verification.ejs");
+                const templatePath = path.join(__dirname, "..", "..", "..", "views", "verification.ejs");
 
                 ejs.renderFile(templatePath, htmlData, function (err, data) {
                     if (err) {
-                        console.log("🚀 ~ file: user.controller.js:165 ~ err:", err);
+                        console.log("🚀 ~ file: user.controller.js:85 ~ err:", err);
                     } else {
                         emailData = {
                             from: "altair",
@@ -140,40 +140,42 @@ class UsersController {
 
     async login(req, res) {
         try {
-            const { email, password } = req.body;
+            setTimeout(async () => {
+                const { email, password } = req.body;
 
-            const user = await UserServices.getOne({ email: email }, { email: 1, username: 1, password: 1, verification_status: 1 });
+                const user = await UserServices.getOne({ email: email }, { email: 1, username: 1, password: 1, verification_status: 1 });
 
-            if (!user) {
-                return res.status(400).json({
-                    success: false,
-                    message: "User Not Found",
-                });
-            }
+                if (!user) {
+                    return res.status(400).json({
+                        success: false,
+                        message: "User Not Found",
+                    });
+                }
 
-            if (user.verification_status !== VERIFICATION_STATUS.VERIFIED) {
-                return res.status(400).json({
-                    success: false,
-                    message: "User Not registered, Verify Your Account First",
-                });
-            }
+                if (user.verification_status !== VERIFICATION_STATUS.VERIFIED) {
+                    return res.status(400).json({
+                        success: false,
+                        message: "User Not registered, Verify Your Account First",
+                    });
+                }
 
-            const isVerify = await CommonFunctions.decryptedPassword(password, user.password);
+                const isVerify = await CommonFunctions.decryptedPassword(password, user.password);
 
-            if (isVerify) {
-                user.token = jwt.sign({ id: user._id, name: user.username }, process.env.JWT_SECRET_KEY || "secretkey", { expiresIn: "30d" });
+                if (isVerify) {
+                    user.token = jwt.sign({ id: user._id, name: user.username }, process.env.JWT_SECRET_KEY || "secretkey", { expiresIn: "30d" });
 
-                return res.status(200).json({
-                    success: true,
-                    data: user,
-                    message: "User LoggedIn successfully",
-                });
-            } else {
-                return res.status(400).json({
-                    success: false,
-                    message: "Password does not match",
-                });
-            }
+                    return res.status(200).json({
+                        success: true,
+                        data: user,
+                        message: "User LoggedIn successfully",
+                    });
+                } else {
+                    return res.status(400).json({
+                        success: false,
+                        message: "Password does not match",
+                    });
+                }
+            }, 3000);
         } catch (error) {
             logger.info("🚀 user.controller.js | line 175 | error", error);
             return res.status(500).json({
@@ -382,6 +384,50 @@ class UsersController {
                     success: true,
                     data: user,
                     message: "Otp Verified Successfully",
+                });
+            } else {
+                return res.status(404).json({
+                    success: false,
+                    data: {},
+                    message: "Server Error",
+                });
+            }
+        } catch (error) {
+            logger.info("🚀 user.controller.js | line 369 | error", error);
+            return res.status(500).json({
+                success: false,
+                error: error,
+            });
+        }
+    }
+
+    async updateUserById(req, res) {
+        try {
+            const { id } = req.params;
+
+            const user = await UserServices.getOne({ _id: id }, { email: 1, profile_picture: 1 });
+
+            if (!user) {
+                return res.status(404).json({
+                    success: false,
+                    data: {},
+                    message: "User Not Exists",
+                });
+            }
+
+            if (req?.files?.image) {
+                removeFile(user.profile_picture);
+
+                req.body.profile_picture = uploadFile("users", req.files.image);
+            }
+
+            const updateUser = await UserServices.updateOne({ _id: user._id }, req.body);
+
+            if (updateUser) {
+                return res.status(200).json({
+                    success: true,
+                    data: user,
+                    message: "User Updated Successfully",
                 });
             } else {
                 return res.status(404).json({
