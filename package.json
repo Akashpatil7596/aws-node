@@ -6,7 +6,7 @@
     "type": "module",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "nodemon app.js",
+        "start": "pm2 start app.js && pm2 logs",
         "dev": "nodemon app.js",
         "debug": "ndb app.js"
     },
