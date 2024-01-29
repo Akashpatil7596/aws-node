@@ -140,42 +140,40 @@ class UsersController {
 
     async login(req, res) {
         try {
-            setTimeout(async () => {
-                const { email, password } = req.body;
+            const { email, password } = req.body;
 
-                const user = await UserServices.getOne({ email: email }, { email: 1, username: 1, password: 1, verification_status: 1 });
+            const user = await UserServices.getOne({ email: email }, { email: 1, username: 1, password: 1, verification_status: 1 });
 
-                if (!user) {
-                    return res.status(400).json({
-                        success: false,
-                        message: "User Not Found",
-                    });
-                }
+            if (!user) {
+                return res.status(400).json({
+                    success: false,
+                    message: "User Not Found",
+                });
+            }
 
-                if (user.verification_status !== VERIFICATION_STATUS.VERIFIED) {
-                    return res.status(400).json({
-                        success: false,
-                        message: "User Not registered, Verify Your Account First",
-                    });
-                }
+            if (user.verification_status !== VERIFICATION_STATUS.VERIFIED) {
+                return res.status(400).json({
+                    success: false,
+                    message: "User Not registered, Verify Your Account First",
+                });
+            }
 
-                const isVerify = await CommonFunctions.decryptedPassword(password, user.password);
+            const isVerify = await CommonFunctions.decryptedPassword(password, user.password);
 
-                if (isVerify) {
-                    user.token = jwt.sign({ id: user._id, name: user.username }, process.env.JWT_SECRET_KEY || "secretkey", { expiresIn: "30d" });
+            if (isVerify) {
+                user.token = jwt.sign({ id: user._id, name: user.username }, process.env.JWT_SECRET_KEY || "secretkey", { expiresIn: "30d" });
 
-                    return res.status(200).json({
-                        success: true,
-                        data: user,
-                        message: "User LoggedIn successfully",
-                    });
-                } else {
-                    return res.status(400).json({
-                        success: false,
-                        message: "Password does not match",
-                    });
-                }
-            }, 3000);
+                return res.status(200).json({
+                    success: true,
+                    data: user,
+                    message: "User LoggedIn successfully",
+                });
+            } else {
+                return res.status(400).json({
+                    success: false,
+                    message: "Password does not match",
+                });
+            }
         } catch (error) {
             logger.info("🚀 user.controller.js | line 175 | error", error);
             return res.status(500).json({
@@ -217,7 +215,7 @@ class UsersController {
 
             const convertToBase64Image = new Buffer.from(getImageBuffer).toString("base64");
 
-            user.profile_picture = convertToBase64Image;
+            user.profile_picture = { data: convertToBase64Image, name: user.profile_picture.split("/")[1] };
 
             if (!user) {
                 return res.status(404).json({

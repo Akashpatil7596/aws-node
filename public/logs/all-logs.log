@@ -1,29 +1,8 @@
-[2023-12-05T12:12:29.948] [INFO] app - 🚀 user.controller.js | line 251 | error ReferenceError: readFileSync is not defined
-    at getUserByUId (file:///home/user/Akash/personal/nodeJs/AWS-related/aws-node/services/v1/users/users.controller.js:213:36)
+[2023-12-07T14:34:02.914] [INFO] app - 🚀 product.controller.js | line 24 | error ReferenceError: path is not defined
+    at getProductsList (file:///home/user/Akash/personal/nodeJs/AWS-related/aws-node/services/v1/products/product.controller.js:35:31)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-[2023-12-05T12:12:35.074] [INFO] app - 🚀 user.controller.js | line 251 | error ReferenceError: readFileSync is not defined
-    at getUserByUId (file:///home/user/Akash/personal/nodeJs/AWS-related/aws-node/services/v1/users/users.controller.js:213:36)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-[2023-12-05T12:24:58.010] [INFO] app - 🚀 user.controller.js | line 251 | error Error: ENOENT: no such file or directory, open '/home/user/Akash/personal/nodeJs/AWS-related/aws-node/public/storage/users/97f2fbed-1492-4f46-a7a9-807aa08dd7fa.jpeg'
-    at Object.openSync (node:fs:581:18)
-    at readFileSync (node:fs:457:35)
-    at getUserByUId (file:///home/user/Akash/personal/nodeJs/AWS-related/aws-node/services/v1/users/users.controller.js:214:36)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/home/user/Akash/personal/nodeJs/AWS-related/aws-node/public/storage/users/97f2fbed-1492-4f46-a7a9-807aa08dd7fa.jpeg'
-}
-[2023-12-05T12:31:41.316] [INFO] app - 🚀 user.controller.js | line 251 | error Error: ENOENT: no such file or directory, open '/home/user/Akash/personal/nodeJs/AWS-related/aws-node/public/storage/users/97f2fbed-1492-4f46-a7a9-807aa08dd7fa.jpeg'
-    at Object.openSync (node:fs:581:18)
-    at readFileSync (node:fs:457:35)
-    at getUserByUId (file:///home/user/Akash/personal/nodeJs/AWS-related/aws-node/services/v1/users/users.controller.js:214:36)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/home/user/Akash/personal/nodeJs/AWS-related/aws-node/public/storage/users/97f2fbed-1492-4f46-a7a9-807aa08dd7fa.jpeg'
-}
-[2023-12-05T16:20:50.587] [INFO] app - 🚀 user.controller.js | line 369 | error ReferenceError: updateUserPassword is not defined
-    at updateUserById (file:///home/user/Akash/personal/nodeJs/AWS-related/aws-node/services/v1/users/users.controller.js:424:13)
+[2023-12-07T14:34:46.647] [INFO] app - 🚀 product.controller.js | line 24 | error TypeError: Cannot read properties of undefined (reading 'split')
+    at file:///home/user/Akash/personal/nodeJs/AWS-related/aws-node/services/v1/products/product.controller.js:45:93
+    at Array.map (<anonymous>)
+    at getProductsList (file:///home/user/Akash/personal/nodeJs/AWS-related/aws-node/services/v1/products/product.controller.js:38:26)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)

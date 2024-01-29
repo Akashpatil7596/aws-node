@@ -14,7 +14,6 @@ const SOURCE_EMAIL = process.env.SMTP_SOURCE_EMAIL || "dummyforaltair@gmail.com"
 const transporter = nodemailer.createTransport(smtpTransport(emailConfig));
 
 const sendNodeMail = async (data) => {
-    console.log("dadjkghasdas", data);
     try {
         const fromEmail = SOURCE_EMAIL;
 

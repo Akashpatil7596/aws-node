@@ -60,9 +60,9 @@ class UsersValidation {
             const result = Schema.validate(req.body);
 
             if (result.hasOwnProperty("error")) {
-                return res.json({
+                return res.status(400).json({
                     success: false,
-                    error: result.error.details[0].message,
+                    message: result.error.details[0].message,
                 });
             } else {
                 next();

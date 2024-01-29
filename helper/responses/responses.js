@@ -5,4 +5,8 @@ export const responses = {
     OTP_EXPIRED: "Otp expired, try to register again!",
     OTP_NOT_VALID: "Otp is not valid, try again!",
     USER_VERIFIED: "User verified successfully",
+
+    PRODUCT_ALREADY_EXISTS: "Product already exists",
+    PRODUCT_ADDED: "Product added successfully",
+    PRODUCT_LIST: "Product list fetched successfully",
 };
