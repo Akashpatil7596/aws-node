@@ -211,11 +211,13 @@ class UsersController {
 
             const imagePath = path.join(__dirname, "..", "..", "..", "public", "storage", user.profile_picture);
 
-            const getImageBuffer = readFileSync(imagePath);
+            if (imagePath) {
+                const getImageBuffer = readFileSync(imagePath);
 
-            const convertToBase64Image = new Buffer.from(getImageBuffer).toString("base64");
+                const convertToBase64Image = new Buffer.from(getImageBuffer).toString("base64");
 
-            user.profile_picture = { data: convertToBase64Image, name: user.profile_picture.split("/")[1] };
+                user.profile_picture = { data: convertToBase64Image, name: user.profile_picture.split("/")[1] };
+            }
 
             if (!user) {
                 return res.status(404).json({
